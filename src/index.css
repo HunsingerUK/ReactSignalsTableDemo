@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+:root {
+  font-family: Poppins, Helvetica, sans-serif;
+  line-height: 1.5;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --th-bg-color: aliceblue;
+
+  --fs-xl: clamp(3rem, 12vw + 1rem, 12rem);   /* (min, growth rate, max) */
+  --fs-600: 1.5rem;
+  --fs-500: 1.25rem;
+  --fs-400: 1rem;
+  --fs-300: .75rem;
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 42em) and (max-width: 50em) {
+  :root {
+    --fs-600: 1rem;
+    --fs-500: .75rem;
+    --fs-400: .55rem;
+    --fs-300: .655rem;
+  }
+}
+@media (min-width: 50em) and (max-width: 78em) {
+  :root {
+    --fs-600: 1rem;
+    --fs-500: .85rem;
+    --fs-400: .75rem;
+    --fs-300: .7rem;
+  }
+}
+@media (min-width: 78em) and (max-width: 88em) {
+  :root {
+    --fs-600: 1.75rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
+    --fs-300: .85rem;
+  }
+}
+@media (min-width: 88em) {
+  :root {
+    --fs-600: 1.75rem;
+    --fs-500: 1.5rem;
+    --fs-400: 1.25rem;
+    --fs-300: 1rem;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  font-family: Poppins;
+}
+
+body {
+  font-size: var(--fs-400);
+}
+
+
+.wrapper {
+  margin: 0 auto;
+  width: min(1750px, 100% - 3rem);
+  margin-inline: auto;
+}
+
+
+/* TABLE */
+
+table {
+  table-layout: fixed;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+caption, th {
+  text-align: left;
+}
+
+caption {
+  padding: .75rem;
+  background-color: hsl(0 0% 0%);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+th {
+  background: hsl(0 0% 0% / 0.5);
+  color: white;
+  font-size: var(--fs-400);
+  text-transform: uppercase;
+}
+
+tr:nth-of-type(2n) {
+  background: hsl(0 0% 0% / 0.1);
+}
+
+th, td {
+  /* border: white solid 1px; */
+  padding: .75rem;
+}
+
+td
+{
+ /* max-width: 0; */
+  font-size: var(--fs-300);
+ overflow: hidden;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+}
+
+#th-title {
+  width: 5%;
+}
+#th-description {
+  width: 30%;
+}
+
+
+#td-description {
+  text-align: left;
+}  
+
+
+
+
+
+
+/* SEARCH FORM */
+.form-wrapper {
+  margin: 0 auto;
+}
+.form-wrapper form {
+  display: inline-block;
+}
+
+.input-wrapper {
+  margin: 20px 0;
+}
+
+.input-wrapper input {
+  margin-left: 10px;
+  padding-left: 20px;
+  width: 350px;
+  height: 40px;
+}
+.input-wrapper label {
+  font-size: var(--fs-600)
+}
